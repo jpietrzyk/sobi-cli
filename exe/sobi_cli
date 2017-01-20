@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+require 'sobi_cli'
+require 'optparse'
+
+options = {}
+
+option_parser = OptionParser.new do |opts|
+  executable_name = File.basename($PROGRAM_NAME)
+  opts.banner = "
+    SoBi_cli is simple client for SoBi server. It sends informations
+    about client.
+
+    Usage: #{executable_name} bike_id
+  "
+end
+
+begin
+  option_parser.parse!
+  rescue OptionParser::InvalidOption => error
+  puts "Can't recognize that #{ error }"
+  exit
+  rescue OptionParser::AmbiguousOption => error
+  puts "That's an #{ error}"
+  exit
+end
+
+if ARGV.empty?
+  puts "    error: you must specify bike_id (integer) "
+  puts option_parser.help
+else
+  page_url = ARGV[0]
+  if bike_id.match(/d/)
+    com_page = SobiCli::BikeClient.new(bike_id)
+  else
+    puts "Bike_id have to be an integer"
+  end
+end executable…"
