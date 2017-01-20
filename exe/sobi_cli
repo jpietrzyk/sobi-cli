@@ -31,10 +31,10 @@ if ARGV.empty?
   puts "    error: you must specify bike_id (integer) "
   puts option_parser.help
 else
-  page_url = ARGV[0]
-  if bike_id.match(/d/)
+  bike_id = ARGV[0]
+  if bike_id.match(/d*/)
     com_page = SobiCli::BikeClient.new(bike_id)
   else
     puts "Bike_id have to be an integer"
   end
-end executable…"
+end
