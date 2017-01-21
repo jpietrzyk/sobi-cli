@@ -4,27 +4,14 @@ A command line app for SoBi clients - works with
 [SoBi server](https://github.com/jpietrzyk/sobi-srv), and
 deliver bike informations.
 
-## Installation
+## Usage
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'sobi_cli'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install sobi_cli
+You should first install SoBi Server from here
+https://github.com/jpietrzyk/sobi-srv, then clone this repo to your local machine and run `bin/setup` to install dependencies.  
 
 Modify `.env` file if you need to change your redis config.
 
-## Usage
-
-Run `exe/sobi_cli {bike_id}` to send data - `{bike_id}` have to be an integer value
+Run `exe/sobi_cli {bike_id}` to send data to SoBi Server - `bike_id` **have to** be an integer value
 
 ## Development
 
