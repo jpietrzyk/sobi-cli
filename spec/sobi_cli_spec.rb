@@ -6,10 +6,10 @@ describe SobiCli do
   end
 
   it 'loads a BikeClient class' do
-    expect(SobiCli::BikeClient).to be_a(Class)
+    expect(SobiCli::Clients::BikeClient).to be_a(Class)
   end
 
   it 'loads a BikeHelper module' do
-    expect(SobiCli::BikeClient).to be_a(Module)
+    expect(SobiCli::Helpers::BikeHelper).to be_a(Module)
   end
 end
