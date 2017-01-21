@@ -3,4 +3,6 @@ redis_connection = Redis.new(
   port: ENV['REDIS_PORT'],
   password: ENV['REDIS_PASSWORD']
 )
-$redis = Redis::Namespace.new('sobi-development', redis: redis_connection)
+$redis = Redis::Namespace.new("sobi-#{ENV['SRV_ENV'] || 'development'}", 
+  redis: redis_connection
+)
