@@ -1,6 +1,8 @@
-# SobiCli
+# SoBi Client
 
-SoBi client. It sends bikes data to SoBi server.
+A command line app for SoBi clients - works with
+[SoBi server](https://github.com/jpietrzyk/sobi-srv), and
+deliver bike informations.
 
 ## Installation
 
@@ -18,9 +20,11 @@ Or install it yourself as:
 
     $ gem install sobi_cli
 
+Modify `.env` file if you need to change your redis config.
+
 ## Usage
 
-Run `exe/so_bi {bike_id}` to send data. Bike id should be an integer value 
+Run `exe/sobi_cli {bike_id}` to send data - `{bike_id}` have to be an integer value
 
 ## Development
 
@@ -30,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sobi_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jpietrzyk/sobi_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
