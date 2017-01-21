@@ -1,6 +1,6 @@
 # SoBi Client
 
-A command line app for SoBi clients - works with
+A command line app for SoBi Client - works with
 [SoBi server](https://github.com/jpietrzyk/sobi-srv), and
 deliver bike informations.
 
