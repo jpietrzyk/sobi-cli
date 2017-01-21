@@ -32,8 +32,8 @@ if ARGV.empty?
   puts option_parser.help
 else
   bike_id = ARGV[0]
-  if bike_id.match(/d*/)
-    com_page = SobiCli::BikeClient.new(bike_id)
+  if bike_id.match(/\A\d+\z/)
+    SobiCli::Clients::BikeClient.new(bike_id)
   else
     puts "Bike_id have to be an integer"
   end
