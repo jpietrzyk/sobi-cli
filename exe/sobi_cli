@@ -33,7 +33,7 @@ if ARGV.empty?
 else
   bike_id = ARGV[0]
   if bike_id.match(/\A\d+\z/)
-    SobiCli::Clients::BikeClient.new(bike_id)
+    SobiCli::Clients::BikeClient.new(bike_id.to_i)
   else
     puts "Bike_id have to be an integer"
   end
