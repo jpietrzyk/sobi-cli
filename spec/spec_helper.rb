@@ -20,5 +20,6 @@ RSpec.configure do |config|
   config.include Aruba::Api
 end
 
+ENV["ENV"] = 'test'
 require 'aruba'
 require 'sobi_cli'

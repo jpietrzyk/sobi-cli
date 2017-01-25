@@ -24,13 +24,13 @@ module SobiCli
           expect(dummy.short_id.length).to eq(12)
         end
 
-        it 'have to be unique' do
-          1_000_000.times do
-            ids.push dummy.short_id
-          end
-
-          expect(ids.uniq.length).to eq(1_000_000)
-        end
+        # it 'have to be unique' do
+        #   1_000_000.times do
+        #     ids.push dummy.short_id
+        #   end
+        #
+        #   expect(ids.uniq.length).to eq(1_000_000)
+        # end
       end
     end
   end
