@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+require 'mock_redis'
 RSpec.describe 'SoBi command line interface', :type => :aruba do
   before { setup_aruba }
   it 'can be run' do
@@ -40,6 +40,7 @@ RSpec.describe 'SoBi command line interface', :type => :aruba do
 end
 
 def run_sobi_cli(bike_id = nil, options = [])
+  $redis = MockRedis.new
   run "exe/sobi_cli #{bike_id} #{options.join(" ")}"
   before_check
 end
